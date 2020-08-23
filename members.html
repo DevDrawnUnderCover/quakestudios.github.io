@@ -1,0 +1,490 @@
+<html lang="en"><head>
+    <link rel="stylesheet" href="https://bootswatch.com/4/darkly/bootstrap.css">
+    <script src="https://kit.fontawesome.com/77b751d7f7.js" crossorigin="anonymous"></script><link href="https://kit-free.fontawesome.com/releases/latest/css/free-v4-shims.min.css" media="all" rel="stylesheet"><link href="https://kit-free.fontawesome.com/releases/latest/css/free-v4-font-face.min.css" media="all" rel="stylesheet"><link href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css" media="all" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+
+        function toggleSidenav() {
+            document.getElementById("sidenav").classList.toggle("active")  
+        }
+        
+        window.onload = function() {
+            document.body.onmousedown = function() { 
+                console.log("MouseClicked")
+                if(document.getElementById("sidenav").className === "active"){
+                    setTimeout(() => {
+                        document.getElementById("sidenav").className = ""
+                    }, 200)
+                    
+                }
+            }
+            setTimeout(() => {
+                document.getElementById("loading-screen").className = "active"
+            },600)
+            setTimeout(() => {
+                var element = document.getElementById("loading-screen");
+                element.parentNode.removeChild(element);
+            },1100)
+            
+        }
+    </script>
+    <title>Qauke studios store page</title>
+        <style>
+ 
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: #375a7f;
+            height:50px;
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+            background: white; 
+        }
+    
+        * {
+          margin: 0;
+          padding: 0;
+          font-family: sans-serif
+        }
+        
+        body {
+          margin: 0em;
+          margin-top:0em;
+          background-color:#2b2d30;
+        }
+        
+        .navbar {
+            height:7em;
+            -webkit-box-shadow: 0px 5px 15px -1px #26282b;
+            -moz-box-shadow: 0px 5px 15px -1px #26282b;
+            box-shadow: 0px 5px 15px -1px #26282b;
+        }
+        
+        #sidenav {
+          position: fixed;
+          left: -15em;
+          top: 0;
+          width: 13em;
+          height: 100vh;
+          background-color:#375a7f;
+          color: white;
+          transition: 0.2s;
+          z-index:200;
+          -webkit-box-shadow: 0px 5px 15px -1px #26282b;
+          -moz-box-shadow: 0px 5px 15px -1px #26282b;
+          box-shadow: 0px 5px 15px -1px #26282b;
+          border-right:3 solid #26282b;
+        }
+        
+        #sidenav.active{
+          left: 0;
+          transition: 0.2s;
+        }
+        
+        .sidenav-link{
+          color: rgba(230,230,230,0.9);
+          text-decoration: none;
+          width: 100%;
+          height: 100%;
+        }
+        
+        .sidenav-item {
+          padding: 10px 10px;
+          border-bottom: 1px solid #1e3145;
+        }
+        
+        .sidenav-link:hover {
+            color:#7bade0;
+            text-decoration:none;
+        }
+        
+        .sidenav-item:hover{
+            border-bottom:1px solid white !important;
+        }
+        
+        .sidenav-link {
+            color:white;
+            text-decoration:none;
+            padding:1em;
+            font-size:1em;
+        }
+        
+        .sidenav-title {
+          padding: 25px;
+          cursor: default;
+          font-size:1.5em;
+        }
+        
+        .sideav-icon {
+            margin: 2rem;
+        }
+        
+        .card {
+            margin:0.5em;
+        }
+        
+        .navbar > i {
+            margin-left: 0.5em;
+        }
+        
+        .galImg {
+            max-height:15em;
+            max-width:15em;
+        }
+        
+        .background-Image{
+            top:0;
+            left:0;
+            width:100%;
+            height:17em;
+            -webkit-box-shadow: inset 0px -42px 43px -22px rgba(0,0,0,0.75);
+            -moz-box-shadow: inset 0px -42px 43px -22px rgba(0,0,0,0.75);
+            box-shadow: inset 0px -42px 43px -22px rgba(0,0,0,0.75);
+            object-fit: cover;
+        }
+        
+        .sidenav-icon {
+            margin:1rem;
+        }
+        
+        a {
+            color:#d6d6d6;
+            text-decoration:none;
+        }
+        
+        a:hover {
+            color:white;
+            text-decoration:underline;
+        }
+        
+        .add{
+            position:absolute;
+            top:22em;
+        }
+        
+        .left {
+            left:2em;
+        }
+        
+        .right {
+            right:2em;
+        }
+        .hover-zoom:hover{
+            transform: scale(1.15);
+            transition:0.2s;
+        }
+        
+        .hover-zoom{
+            transition:0.2s;
+        }
+        
+        #loading-screen{
+            position:fixed;
+            top:0;
+            left:0;
+            z-index:999;
+            background-color:#375a7f;
+            width:100vw;
+            height:100vh;
+            transition:0.5s;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+        }
+        
+        #loading-screen > i {
+            z-index:1000;
+        }
+        
+        #loading-screen.active{
+            transition:0.5s;
+            opacity:0%;
+        }
+        
+        #loading-screen.active > i{
+            transition:0.5s;
+            transform:scale(0) rotate(360deg);
+        }
+        
+    </style>
+</head>
+<body>
+    
+    
+    
+    <div class="add left">
+        <a href="https://www.roblox.com/groups/6441220/Quake-Studios#!/about">
+            <img src="https://media.discordapp.net/attachments/742171698597462128/746402331238596728/Ad_Join_now_ad.png">
+        </a>
+    </div>
+    <div class="add right">
+        <a href="https://www.roblox.com/groups/6441220/Quake-Studios#!/about">
+            <img src="https://media.discordapp.net/attachments/742171698597462128/746402333717430322/Ads_New_clothing_ad.png" href="https://www.roblox.com/groups/6441220/Quake-Studios#!/about">
+        </a>
+    </div>
+    
+    <img class="background-Image" src="https://media.discordapp.net/attachments/742171698597462128/746076383394005092/imanuggertgod_sexy_profile_no_watermark.png?width=730&amp;height=410">
+    
+    <nav style="position:fixed;top:0;left:0;width:100%;z-index:100" class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <i onclick="toggleSidenav()" class="fas fa-bars fa-2x" aria-hidden="true"></i>
+        <h2 style="margin-left:38%">Quake Studios</h2>
+    </nav>
+
+    <div id="sidenav">
+        <h2 class="sidenav-title">Quake studios</h2>
+        <ul class="sidenav-links">
+          <li onclick="toggleSidenav()" class="sidenav-item">
+            <a href="/" class="sidenav-link"><i class="fas fa-home fa-fw fa-1x sidenav-icon" aria-hidden="true"></i>Home</a>
+          </li>
+          <li onclick="toggleSidenav()" class="sidenav-item">
+            <a href="/portfolio" class="sidenav-link"><i class="fas fa-tshirt fa-fw fa-1x sidenav-icon" aria-hidden="true"></i>Clothing</a>
+          </li>
+          <li onclick="toggleSidenav()" class="sidenav-item">
+            <a href="/members" class="sidenav-link"><i class="fas fa-users fa-fw fa-1x sidenav-icon" aria-hidden="true"></i>Members</a>
+          </li>
+        </ul>
+    </div>
+
+<div style="margin:1em;display:flex;width:95%; justify-content:center;align-items:center">
+    <form action="/members" method="POST">
+        <input type="text" placeholder="Search" style="width:4em;background-color:#333333;border: 2px solid #e8e8e8;border-radius:5px;padding:0.2em 1em;width:15em;-webkit-box-shadow: inset -12px -16px 33px -19px rgba(0,0,0,0.75);-moz-box-shadow: inset -12px -16px 33px -19px rgba(0,0,0,0.75);box-shadow: inset -12px -16px 33px -19px rgba(0,0,0,0.75);" name="searchTerm" id="searchTerm">
+    </form>
+</div>
+
+<div style="display:flex;flex-wrap:wrap;width:58%;margin-left:auto;margin-right:auto">
+    <div class="card text-white bg-dark mb-3" style="width: 22rem">
+        <div class="card-header" style="text-overflow: ellipsis;height:2.5rem;overflow: hidden;white-space:nowrap;background-color:#824cad">imanuggetgod</div>
+        <div class="card-body">
+            <img class="hover-zoom" src="https://www.roblox.com/headshot-thumbnail/image?userId=343230583&amp;width=420&amp;height=420&amp;format=png" alt="No image found" style="height:15rem;width:15rem;border: 2px solid gray; border-radius:5px">
+        </div>
+    </div>
+    <div class="card text-white bg-dark mb-3" style="width: 22rem">
+        <div class="card-header" style="text-overflow: ellipsis;height:2.5rem;overflow: hidden;white-space:nowrap;background-color:#7a7a54">iiLordAvia</div>
+        <div class="card-body">
+            <img class="hover-zoom" src="https://www.roblox.com/headshot-thumbnail/image?userId=532558081&amp;width=420&amp;height=420&amp;format=png" alt="No image found" style="height:15rem;width:15rem;border: 2px solid gray; border-radius:5px">
+        </div>
+    </div>
+    <div class="card text-white bg-dark mb-3" style="width: 22rem">
+        <div class="card-header" style="text-overflow: ellipsis;height:2.5rem;overflow: hidden;white-space:nowrap;background-color:#7a7a54">CougarDaBoss</div>
+        <div class="card-body">
+            <img class="hover-zoom" src="https://www.roblox.com/headshot-thumbnail/image?userId=910177014&amp;width=420&amp;height=420&amp;format=png" alt="No image found" style="height:15rem;width:15rem;border: 2px solid gray; border-radius:5px">
+        </div>
+    </div>
+    <div class="card text-white bg-dark mb-3" style="width: 22rem">
+        <div class="card-header" style="text-overflow: ellipsis;height:2.5rem;overflow: hidden;white-space:nowrap;background-color:#7a7a54">JanuZz011</div>
+        <div class="card-body">
+            <img class="hover-zoom" src="https://www.roblox.com/headshot-thumbnail/image?userId=71567963&amp;width=420&amp;height=420&amp;format=png" alt="No image found" style="height:15rem;width:15rem;border: 2px solid gray; border-radius:5px">
+        </div>
+    </div>
+    <div class="card text-white bg-dark mb-3" style="width: 22rem">
+        <div class="card-header" style="text-overflow: ellipsis;height:2.5rem;overflow: hidden;white-space:nowrap;background-color:#7a7a54">The_Aten</div>
+        <div class="card-body">
+            <img class="hover-zoom" src="https://www.roblox.com/headshot-thumbnail/image?userId=35143306&amp;width=420&amp;height=420&amp;format=png" alt="No image found" style="height:15rem;width:15rem;border: 2px solid gray; border-radius:5px">
+        </div>
+    </div>
+    <div class="card text-white bg-dark mb-3" style="width: 22rem">
+        <div class="card-header" style="text-overflow: ellipsis;height:2.5rem;overflow: hidden;white-space:nowrap;background-color:#7a7a54">DevelopedLua</div>
+        <div class="card-body">
+            <img class="hover-zoom" src="https://www.roblox.com/headshot-thumbnail/image?userId=1808031546&amp;width=420&amp;height=420&amp;format=png" alt="No image found" style="height:15rem;width:15rem;border: 2px solid gray; border-radius:5px">
+        </div>
+    </div>
+    <div class="card text-white bg-dark mb-3" style="width: 22rem">
+        <div class="card-header" style="text-overflow: ellipsis;height:2.5rem;overflow: hidden;white-space:nowrap;background-color:#7a7a54">Andrew534317</div>
+        <div class="card-body">
+            <img class="hover-zoom" src="https://www.roblox.com/headshot-thumbnail/image?userId=187277064&amp;width=420&amp;height=420&amp;format=png" alt="No image found" style="height:15rem;width:15rem;border: 2px solid gray; border-radius:5px">
+        </div>
+    </div>
+    <div class="card text-white bg-dark mb-3" style="width: 22rem">
+        <div class="card-header" style="text-overflow: ellipsis;height:2.5rem;overflow: hidden;white-space:nowrap;background-color:#7a7a54">RedstonePlayz09</div>
+        <div class="card-body">
+            <img class="hover-zoom" src="https://www.roblox.com/headshot-thumbnail/image?userId=204267677&amp;width=420&amp;height=420&amp;format=png" alt="No image found" style="height:15rem;width:15rem;border: 2px solid gray; border-radius:5px">
+        </div>
+    </div>
+    <div class="card text-white bg-dark mb-3" style="width: 22rem">
+        <div class="card-header" style="text-overflow: ellipsis;height:2.5rem;overflow: hidden;white-space:nowrap;background-color:#7a7a54">Xsticcy</div>
+        <div class="card-body">
+            <img class="hover-zoom" src="https://www.roblox.com/headshot-thumbnail/image?userId=241669560&amp;width=420&amp;height=420&amp;format=png" alt="No image found" style="height:15rem;width:15rem;border: 2px solid gray; border-radius:5px">
+        </div>
+    </div>
+    <div class="card text-white bg-dark mb-3" style="width: 22rem">
+        <div class="card-header" style="text-overflow: ellipsis;height:2.5rem;overflow: hidden;white-space:nowrap;background-color:#7a7a54">Zip086</div>
+        <div class="card-body">
+            <img class="hover-zoom" src="https://www.roblox.com/headshot-thumbnail/image?userId=13493122&amp;width=420&amp;height=420&amp;format=png" alt="No image found" style="height:15rem;width:15rem;border: 2px solid gray; border-radius:5px">
+        </div>
+    </div>
+    <div class="card text-white bg-dark mb-3" style="width: 22rem">
+        <div class="card-header" style="text-overflow: ellipsis;height:2.5rem;overflow: hidden;white-space:nowrap;background-color:#7a7a54">MSDLF</div>
+        <div class="card-body">
+            <img class="hover-zoom" src="https://www.roblox.com/headshot-thumbnail/image?userId=334766094&amp;width=420&amp;height=420&amp;format=png" alt="No image found" style="height:15rem;width:15rem;border: 2px solid gray; border-radius:5px">
+        </div>
+    </div>
+    <div class="card text-white bg-dark mb-3" style="width: 22rem">
+        <div class="card-header" style="text-overflow: ellipsis;height:2.5rem;overflow: hidden;white-space:nowrap;background-color:#7a7a54">GarnetAnimations</div>
+        <div class="card-body">
+            <img class="hover-zoom" src="https://www.roblox.com/headshot-thumbnail/image?userId=42188661&amp;width=420&amp;height=420&amp;format=png" alt="No image found" style="height:15rem;width:15rem;border: 2px solid gray; border-radius:5px">
+        </div>
+    </div>
+    <div class="card text-white bg-dark mb-3" style="width: 22rem">
+        <div class="card-header" style="text-overflow: ellipsis;height:2.5rem;overflow: hidden;white-space:nowrap;background-color:#7a7a54">World_Production</div>
+        <div class="card-body">
+            <img class="hover-zoom" src="https://www.roblox.com/headshot-thumbnail/image?userId=1597704355&amp;width=420&amp;height=420&amp;format=png" alt="No image found" style="height:15rem;width:15rem;border: 2px solid gray; border-radius:5px">
+        </div>
+    </div>
+    <div class="card text-white bg-dark mb-3" style="width: 22rem">
+        <div class="card-header" style="text-overflow: ellipsis;height:2.5rem;overflow: hidden;white-space:nowrap;background-color:">lastalpha627</div>
+        <div class="card-body">
+            <img class="hover-zoom" src="https://www.roblox.com/headshot-thumbnail/image?userId=1226392612&amp;width=420&amp;height=420&amp;format=png" alt="No image found" style="height:15rem;width:15rem;border: 2px solid gray; border-radius:5px">
+        </div>
+    </div>
+    <div class="card text-white bg-dark mb-3" style="width: 22rem">
+        <div class="card-header" style="text-overflow: ellipsis;height:2.5rem;overflow: hidden;white-space:nowrap;background-color:#3c6a7d">Gioiem</div>
+        <div class="card-body">
+            <img class="hover-zoom" src="https://www.roblox.com/headshot-thumbnail/image?userId=1605746759&amp;width=420&amp;height=420&amp;format=png" alt="No image found" style="height:15rem;width:15rem;border: 2px solid gray; border-radius:5px">
+        </div>
+    </div>
+    <div class="card text-white bg-dark mb-3" style="width: 22rem">
+        <div class="card-header" style="text-overflow: ellipsis;height:2.5rem;overflow: hidden;white-space:nowrap;background-color:#3c6a7d">procat1112</div>
+        <div class="card-body">
+            <img class="hover-zoom" src="https://www.roblox.com/headshot-thumbnail/image?userId=1312472740&amp;width=420&amp;height=420&amp;format=png" alt="No image found" style="height:15rem;width:15rem;border: 2px solid gray; border-radius:5px">
+        </div>
+    </div>
+    <div class="card text-white bg-dark mb-3" style="width: 22rem">
+        <div class="card-header" style="text-overflow: ellipsis;height:2.5rem;overflow: hidden;white-space:nowrap;background-color:#3c6a7d">x_falker</div>
+        <div class="card-body">
+            <img class="hover-zoom" src="https://www.roblox.com/headshot-thumbnail/image?userId=399802983&amp;width=420&amp;height=420&amp;format=png" alt="No image found" style="height:15rem;width:15rem;border: 2px solid gray; border-radius:5px">
+        </div>
+    </div>
+    <div class="card text-white bg-dark mb-3" style="width: 22rem">
+        <div class="card-header" style="text-overflow: ellipsis;height:2.5rem;overflow: hidden;white-space:nowrap;background-color:#3c6a7d">skippxrs</div>
+        <div class="card-body">
+            <img class="hover-zoom" src="https://www.roblox.com/headshot-thumbnail/image?userId=1180901539&amp;width=420&amp;height=420&amp;format=png" alt="No image found" style="height:15rem;width:15rem;border: 2px solid gray; border-radius:5px">
+        </div>
+    </div>
+    <div class="card text-white bg-dark mb-3" style="width: 22rem">
+        <div class="card-header" style="text-overflow: ellipsis;height:2.5rem;overflow: hidden;white-space:nowrap;background-color:#3c6a7d">tripleh3028</div>
+        <div class="card-body">
+            <img class="hover-zoom" src="https://www.roblox.com/headshot-thumbnail/image?userId=855418649&amp;width=420&amp;height=420&amp;format=png" alt="No image found" style="height:15rem;width:15rem;border: 2px solid gray; border-radius:5px">
+        </div>
+    </div>
+    <div class="card text-white bg-dark mb-3" style="width: 22rem">
+        <div class="card-header" style="text-overflow: ellipsis;height:2.5rem;overflow: hidden;white-space:nowrap;background-color:#3c6a7d">Layo2089</div>
+        <div class="card-body">
+            <img class="hover-zoom" src="https://www.roblox.com/headshot-thumbnail/image?userId=1665367807&amp;width=420&amp;height=420&amp;format=png" alt="No image found" style="height:15rem;width:15rem;border: 2px solid gray; border-radius:5px">
+        </div>
+    </div>
+    <div class="card text-white bg-dark mb-3" style="width: 22rem">
+        <div class="card-header" style="text-overflow: ellipsis;height:2.5rem;overflow: hidden;white-space:nowrap;background-color:#3c6a7d">Imanuggetgod2</div>
+        <div class="card-body">
+            <img class="hover-zoom" src="https://www.roblox.com/headshot-thumbnail/image?userId=1575309067&amp;width=420&amp;height=420&amp;format=png" alt="No image found" style="height:15rem;width:15rem;border: 2px solid gray; border-radius:5px">
+        </div>
+    </div>
+    <div class="card text-white bg-dark mb-3" style="width: 22rem">
+        <div class="card-header" style="text-overflow: ellipsis;height:2.5rem;overflow: hidden;white-space:nowrap;background-color:#3c6a7d">JallelFernande</div>
+        <div class="card-body">
+            <img class="hover-zoom" src="https://www.roblox.com/headshot-thumbnail/image?userId=1496078080&amp;width=420&amp;height=420&amp;format=png" alt="No image found" style="height:15rem;width:15rem;border: 2px solid gray; border-radius:5px">
+        </div>
+    </div>
+    <div class="card text-white bg-dark mb-3" style="width: 22rem">
+        <div class="card-header" style="text-overflow: ellipsis;height:2.5rem;overflow: hidden;white-space:nowrap;background-color:#3c6a7d">GJFHSGA</div>
+        <div class="card-body">
+            <img class="hover-zoom" src="https://www.roblox.com/headshot-thumbnail/image?userId=1541495506&amp;width=420&amp;height=420&amp;format=png" alt="No image found" style="height:15rem;width:15rem;border: 2px solid gray; border-radius:5px">
+        </div>
+    </div>
+    <div class="card text-white bg-dark mb-3" style="width: 22rem">
+        <div class="card-header" style="text-overflow: ellipsis;height:2.5rem;overflow: hidden;white-space:nowrap;background-color:#3c6a7d">EvilEnderslender</div>
+        <div class="card-body">
+            <img class="hover-zoom" src="https://www.roblox.com/headshot-thumbnail/image?userId=188330818&amp;width=420&amp;height=420&amp;format=png" alt="No image found" style="height:15rem;width:15rem;border: 2px solid gray; border-radius:5px">
+        </div>
+    </div>
+    <div class="card text-white bg-dark mb-3" style="width: 22rem">
+        <div class="card-header" style="text-overflow: ellipsis;height:2.5rem;overflow: hidden;white-space:nowrap;background-color:#3c6a7d">AidenisthePolice345</div>
+        <div class="card-body">
+            <img class="hover-zoom" src="https://www.roblox.com/headshot-thumbnail/image?userId=157975271&amp;width=420&amp;height=420&amp;format=png" alt="No image found" style="height:15rem;width:15rem;border: 2px solid gray; border-radius:5px">
+        </div>
+    </div>
+    <div class="card text-white bg-dark mb-3" style="width: 22rem">
+        <div class="card-header" style="text-overflow: ellipsis;height:2.5rem;overflow: hidden;white-space:nowrap;background-color:#3c6a7d">IovingmytighthoIes</div>
+        <div class="card-body">
+            <img class="hover-zoom" src="https://www.roblox.com/headshot-thumbnail/image?userId=1660151841&amp;width=420&amp;height=420&amp;format=png" alt="No image found" style="height:15rem;width:15rem;border: 2px solid gray; border-radius:5px">
+        </div>
+    </div>
+    <div class="card text-white bg-dark mb-3" style="width: 22rem">
+        <div class="card-header" style="text-overflow: ellipsis;height:2.5rem;overflow: hidden;white-space:nowrap;background-color:#3c6a7d">marvelman5058</div>
+        <div class="card-body">
+            <img class="hover-zoom" src="https://www.roblox.com/headshot-thumbnail/image?userId=1425770694&amp;width=420&amp;height=420&amp;format=png" alt="No image found" style="height:15rem;width:15rem;border: 2px solid gray; border-radius:5px">
+        </div>
+    </div>
+    <div class="card text-white bg-dark mb-3" style="width: 22rem">
+        <div class="card-header" style="text-overflow: ellipsis;height:2.5rem;overflow: hidden;white-space:nowrap;background-color:#3c6a7d">xllPizzaBR0Zllx</div>
+        <div class="card-body">
+            <img class="hover-zoom" src="https://www.roblox.com/headshot-thumbnail/image?userId=1562046879&amp;width=420&amp;height=420&amp;format=png" alt="No image found" style="height:15rem;width:15rem;border: 2px solid gray; border-radius:5px">
+        </div>
+    </div>
+    <div class="card text-white bg-dark mb-3" style="width: 22rem">
+        <div class="card-header" style="text-overflow: ellipsis;height:2.5rem;overflow: hidden;white-space:nowrap;background-color:#3c6a7d">CoolboyJohney21</div>
+        <div class="card-body">
+            <img class="hover-zoom" src="https://www.roblox.com/headshot-thumbnail/image?userId=1655579773&amp;width=420&amp;height=420&amp;format=png" alt="No image found" style="height:15rem;width:15rem;border: 2px solid gray; border-radius:5px">
+        </div>
+    </div>
+    <div class="card text-white bg-dark mb-3" style="width: 22rem">
+        <div class="card-header" style="text-overflow: ellipsis;height:2.5rem;overflow: hidden;white-space:nowrap;background-color:#3c6a7d">XxHannahDaPandaxX</div>
+        <div class="card-body">
+            <img class="hover-zoom" src="https://www.roblox.com/headshot-thumbnail/image?userId=866065595&amp;width=420&amp;height=420&amp;format=png" alt="No image found" style="height:15rem;width:15rem;border: 2px solid gray; border-radius:5px">
+        </div>
+    </div>
+    <div class="card text-white bg-dark mb-3" style="width: 22rem">
+        <div class="card-header" style="text-overflow: ellipsis;height:2.5rem;overflow: hidden;white-space:nowrap;background-color:#3c6a7d">djsavage12223</div>
+        <div class="card-body">
+            <img class="hover-zoom" src="https://www.roblox.com/headshot-thumbnail/image?userId=1434958774&amp;width=420&amp;height=420&amp;format=png" alt="No image found" style="height:15rem;width:15rem;border: 2px solid gray; border-radius:5px">
+        </div>
+    </div>
+    <div class="card text-white bg-dark mb-3" style="width: 22rem">
+        <div class="card-header" style="text-overflow: ellipsis;height:2.5rem;overflow: hidden;white-space:nowrap;background-color:#3c6a7d">gratishumano123</div>
+        <div class="card-body">
+            <img class="hover-zoom" src="https://www.roblox.com/headshot-thumbnail/image?userId=174696062&amp;width=420&amp;height=420&amp;format=png" alt="No image found" style="height:15rem;width:15rem;border: 2px solid gray; border-radius:5px">
+        </div>
+    </div>
+    <div class="card text-white bg-dark mb-3" style="width: 22rem">
+        <div class="card-header" style="text-overflow: ellipsis;height:2.5rem;overflow: hidden;white-space:nowrap;background-color:#3c6a7d">Euxax</div>
+        <div class="card-body">
+            <img class="hover-zoom" src="https://www.roblox.com/headshot-thumbnail/image?userId=1020532820&amp;width=420&amp;height=420&amp;format=png" alt="No image found" style="height:15rem;width:15rem;border: 2px solid gray; border-radius:5px">
+        </div>
+    </div>
+    <div class="card text-white bg-dark mb-3" style="width: 22rem">
+        <div class="card-header" style="text-overflow: ellipsis;height:2.5rem;overflow: hidden;white-space:nowrap;background-color:#3c6a7d">Himynameisalxe7790</div>
+        <div class="card-body">
+            <img class="hover-zoom" src="https://www.roblox.com/headshot-thumbnail/image?userId=1453616751&amp;width=420&amp;height=420&amp;format=png" alt="No image found" style="height:15rem;width:15rem;border: 2px solid gray; border-radius:5px">
+        </div>
+    </div>
+    <div class="card text-white bg-dark mb-3" style="width: 22rem">
+        <div class="card-header" style="text-overflow: ellipsis;height:2.5rem;overflow: hidden;white-space:nowrap;background-color:#3c6a7d">lemaiamhkhoa07</div>
+        <div class="card-body">
+            <img class="hover-zoom" src="https://www.roblox.com/headshot-thumbnail/image?userId=291614536&amp;width=420&amp;height=420&amp;format=png" alt="No image found" style="height:15rem;width:15rem;border: 2px solid gray; border-radius:5px">
+        </div>
+    </div>
+    <div class="card text-white bg-dark mb-3" style="width: 22rem">
+        <div class="card-header" style="text-overflow: ellipsis;height:2.5rem;overflow: hidden;white-space:nowrap;background-color:#3c6a7d">DuckyBoiJoe</div>
+        <div class="card-body">
+            <img class="hover-zoom" src="https://www.roblox.com/headshot-thumbnail/image?userId=1346119431&amp;width=420&amp;height=420&amp;format=png" alt="No image found" style="height:15rem;width:15rem;border: 2px solid gray; border-radius:5px">
+        </div>
+    </div>
+    <div class="card text-white bg-dark mb-3" style="width: 22rem">
+        <div class="card-header" style="text-overflow: ellipsis;height:2.5rem;overflow: hidden;white-space:nowrap;background-color:#3c6a7d">chicago4592</div>
+        <div class="card-body">
+            <img class="hover-zoom" src="https://www.roblox.com/headshot-thumbnail/image?userId=70165416&amp;width=420&amp;height=420&amp;format=png" alt="No image found" style="height:15rem;width:15rem;border: 2px solid gray; border-radius:5px">
+        </div>
+    </div>
+    <div class="card text-white bg-dark mb-3" style="width: 22rem">
+        <div class="card-header" style="text-overflow: ellipsis;height:2.5rem;overflow: hidden;white-space:nowrap;background-color:#3c6a7d">ZebsZebs</div>
+        <div class="card-body">
+            <img class="hover-zoom" src="https://www.roblox.com/headshot-thumbnail/image?userId=1416148231&amp;width=420&amp;height=420&amp;format=png" alt="No image found" style="height:15rem;width:15rem;border: 2px solid gray; border-radius:5px">
+        </div>
+    </div>
+</div>
+<div style="width:100%;height:6em;position:absolute;margin-top:auto;background-color:#212121;display:flex">
+    <div class="left-link" style="display:flex;flex-direction:collumn;margin-left:4em">
+        <a style="margin:1em;font-size:2em" href="https://forms.gle/a5fAasKFBKcVg9Uo8">Jobs</a>
+    </div>
+</div></body></html>
