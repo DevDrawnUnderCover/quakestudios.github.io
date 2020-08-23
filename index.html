@@ -1,0 +1,272 @@
+<html lang="en"><head>
+    <link rel="stylesheet" href="https://bootswatch.com/4/darkly/bootstrap.css">
+    <script src="https://kit.fontawesome.com/77b751d7f7.js" crossorigin="anonymous"></script><link href="https://kit-free.fontawesome.com/releases/latest/css/free-v4-shims.min.css" media="all" rel="stylesheet"><link href="https://kit-free.fontawesome.com/releases/latest/css/free-v4-font-face.min.css" media="all" rel="stylesheet"><link href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css" media="all" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+
+        function toggleSidenav() {
+            document.getElementById("sidenav").classList.toggle("active")  
+        }
+        
+        window.onload = function() {
+            document.body.onmousedown = function() { 
+                console.log("MouseClicked")
+                if(document.getElementById("sidenav").className === "active"){
+                    setTimeout(() => {
+                        document.getElementById("sidenav").className = ""
+                    }, 200)
+                    
+                }
+            }
+            setTimeout(() => {
+                document.getElementById("loading-screen").className = "active"
+            },600)
+            setTimeout(() => {
+                var element = document.getElementById("loading-screen");
+                element.parentNode.removeChild(element);
+            },1100)
+            
+        }
+    </script>
+    <title>Qauke studios store page</title>
+        <style>
+ 
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: #375a7f;
+            height:50px;
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+            background: white; 
+        }
+    
+        * {
+          margin: 0;
+          padding: 0;
+          font-family: sans-serif
+        }
+        
+        body {
+          margin: 0em;
+          margin-top:0em;
+          background-color:#2b2d30;
+        }
+        
+        .navbar {
+            height:7em;
+            -webkit-box-shadow: 0px 5px 15px -1px #26282b;
+            -moz-box-shadow: 0px 5px 15px -1px #26282b;
+            box-shadow: 0px 5px 15px -1px #26282b;
+        }
+        
+        #sidenav {
+          position: fixed;
+          left: -15em;
+          top: 0;
+          width: 13em;
+          height: 100vh;
+          background-color:#375a7f;
+          color: white;
+          transition: 0.2s;
+          z-index:200;
+          -webkit-box-shadow: 0px 5px 15px -1px #26282b;
+          -moz-box-shadow: 0px 5px 15px -1px #26282b;
+          box-shadow: 0px 5px 15px -1px #26282b;
+          border-right:3 solid #26282b;
+        }
+        
+        #sidenav.active{
+          left: 0;
+          transition: 0.2s;
+        }
+        
+        .sidenav-link{
+          color: rgba(230,230,230,0.9);
+          text-decoration: none;
+          width: 100%;
+          height: 100%;
+        }
+        
+        .sidenav-item {
+          padding: 10px 10px;
+          border-bottom: 1px solid #1e3145;
+        }
+        
+        .sidenav-link:hover {
+            color:#7bade0;
+            text-decoration:none;
+        }
+        
+        .sidenav-item:hover{
+            border-bottom:1px solid white !important;
+        }
+        
+        .sidenav-link {
+            color:white;
+            text-decoration:none;
+            padding:1em;
+            font-size:1em;
+        }
+        
+        .sidenav-title {
+          padding: 25px;
+          cursor: default;
+          font-size:1.5em;
+        }
+        
+        .sideav-icon {
+            margin: 2rem;
+        }
+        
+        .card {
+            margin:0.5em;
+        }
+        
+        .navbar > i {
+            margin-left: 0.5em;
+        }
+        
+        .galImg {
+            max-height:15em;
+            max-width:15em;
+        }
+        
+        .background-Image{
+            top:0;
+            left:0;
+            width:100%;
+            height:17em;
+            -webkit-box-shadow: inset 0px -42px 43px -22px rgba(0,0,0,0.75);
+            -moz-box-shadow: inset 0px -42px 43px -22px rgba(0,0,0,0.75);
+            box-shadow: inset 0px -42px 43px -22px rgba(0,0,0,0.75);
+            object-fit: cover;
+        }
+        
+        .sidenav-icon {
+            margin:1rem;
+        }
+        
+        a {
+            color:#d6d6d6;
+            text-decoration:none;
+        }
+        
+        a:hover {
+            color:white;
+            text-decoration:underline;
+        }
+        
+        .add{
+            position:absolute;
+            top:22em;
+        }
+        
+        .left {
+            left:2em;
+        }
+        
+        .right {
+            right:2em;
+        }
+        .hover-zoom:hover{
+            transform: scale(1.15);
+            transition:0.2s;
+        }
+        
+        .hover-zoom{
+            transition:0.2s;
+        }
+        
+        #loading-screen{
+            position:fixed;
+            top:0;
+            left:0;
+            z-index:999;
+            background-color:#375a7f;
+            width:100vw;
+            height:100vh;
+            transition:0.5s;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+        }
+        
+        #loading-screen > i {
+            z-index:1000;
+        }
+        
+        #loading-screen.active{
+            transition:0.5s;
+            opacity:0%;
+        }
+        
+        #loading-screen.active > i{
+            transition:0.5s;
+            transform:scale(0) rotate(360deg);
+        }
+        
+    </style>
+</head>
+<body>
+    
+    
+    
+    <div class="add left">
+        <a href="https://www.roblox.com/groups/6441220/Quake-Studios#!/about">
+            <img src="https://media.discordapp.net/attachments/742171698597462128/746402331238596728/Ad_Join_now_ad.png">
+        </a>
+    </div>
+    <div class="add right">
+        <a href="https://www.roblox.com/groups/6441220/Quake-Studios#!/about">
+            <img src="https://media.discordapp.net/attachments/742171698597462128/746402333717430322/Ads_New_clothing_ad.png" href="https://www.roblox.com/groups/6441220/Quake-Studios#!/about">
+        </a>
+    </div>
+    
+    <img class="background-Image" src="https://media.discordapp.net/attachments/742171698597462128/746076383394005092/imanuggertgod_sexy_profile_no_watermark.png?width=730&amp;height=410">
+    
+    <nav style="position:fixed;top:0;left:0;width:100%;z-index:100" class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <i onclick="toggleSidenav()" class="fas fa-bars fa-2x" aria-hidden="true"></i>
+        <h2 style="margin-left:38%">Quake Studios</h2>
+    </nav>
+
+    <div id="sidenav">
+        <h2 class="sidenav-title">Quake studios</h2>
+        <ul class="sidenav-links">
+          <li onclick="toggleSidenav()" class="sidenav-item">
+            <a href="/" class="sidenav-link"><i class="fas fa-home fa-fw fa-1x sidenav-icon" aria-hidden="true"></i>Home</a>
+          </li>
+          <li onclick="toggleSidenav()" class="sidenav-item">
+            <a href="/portfolio" class="sidenav-link"><i class="fas fa-tshirt fa-fw fa-1x sidenav-icon" aria-hidden="true"></i>Clothing</a>
+          </li>
+          <li onclick="toggleSidenav()" class="sidenav-item">
+            <a href="/members" class="sidenav-link"><i class="fas fa-users fa-fw fa-1x sidenav-icon" aria-hidden="true"></i>Members</a>
+          </li>
+        </ul>
+    </div>
+    <div style="display:flex;align-items:center;width:70%;justify-content:center;margin-left:auto;margin-right:auto">
+        <img src="https://media.discordapp.net/attachments/742171698597462128/746402328663425165/Quake_studios_logo.png" style="margin-top:1em;object-fit:cover;height:40em;width:60em;-webkit-box-shadow: 10px 10px 17px -8px rgba(0,0,0,0.75);-moz-box-shadow: 10px 10px 17px -8px rgba(0,0,0,0.75);box-shadow: 10px 10px 17px -8px rgba(0,0,0,0.75);">
+    </div>
+    
+    <div class="games" style="width:100%;display:flex;flex-wrap:wrap;justify-content:center;margin-top:10em;margin-bottom:6em">
+        <div class="card mb-3" style="width:20%;border-radius:4em 4em 0 0">
+            <img style="height: 200px; display: block;border-radius:4em 4em 0 0" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22318%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20318%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_158bd1d28ef%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A16pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_158bd1d28ef%22%3E%3Crect%20width%3D%22318%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22129.359375%22%20y%3D%2297.35%22%3EImage%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" alt="Card image">
+            <div class="card-body">
+                <h5 class="card-title">GiantInvasion👾[WIP]</h5>
+                <h6 class="card-subtitle text-muted">By -Quake Studios-</h6><br>
+                <p class="card-text">Giants have emerged from the mysterious cave where once our kingdom would go to mine for gold... These giants aren’t happy we invaded their home and are looking for bitter revenge... It is YOUR duty to stop these giants. What will you grab?”</p>
+            </div>
+            <div class="card-body">
+                <a href="https://discord.gg/e5Sft9N" class="card-link"><i class="fab fa-discord fa-fw fa-lg" aria-hidden="true"></i></a>
+                <a href="https://www.roblox.com/groups/6441220/Quake-Studios#!/about" class="card-link"><img src="https://vignette.wikia.nocookie.net/logopedia/images/d/da/Roblox_2018_O_Icon_final_-_Gray.svg/revision/latest/scale-to-width-down/340?cb=20190809191156" style="width:20px;height:20px"></a>
+            </div>
+        </div>
+    </div>
+    
+<div style="width:100%;height:6em;position:absolute;margin-top:auto;background-color:#212121;display:flex">
+    <div class="left-link" style="display:flex;flex-direction:collumn;margin-left:4em">
+        <a style="margin:1em;font-size:2em" href="https://forms.gle/a5fAasKFBKcVg9Uo8">Jobs</a>
+    </div>
+</div></body></html>
