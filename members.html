@@ -9,46 +9,28 @@
             document.getElementById("sidenav").classList.toggle("active")  
         }
         
-        function searchForNames() {
-            // Declare variables
-            var input, filter, ul, li, a, i, txtValue;
-            input = document.getElementById('myInput');
-            filter = input.value.toUpperCase();
-            ul = document.getElementById("myUL");
-            li = ul.getElementsByTagName('li');
+        window.onload = function searchForNames() {
+	    	// Declare variables
+	    	var input, filter, ul, li, a, i, txtValue;
+	    	input = document.getElementsByClassName("searchbar")[0];
+	    	filter = input.value.toUpperCase();
+	    	ul = document.getElementsByClassName("members-container");
+		ul = ul[0];
+	    	li = ul.getElementsByClassName("card");
 
-            // Loop through all list items, and hide those who don't match the search query
-          	for (i = 0; i < li.length; i++) {
-           		a = li[i].getElementsByTagName("a")[0];
-            	txtValue = a.textContent || a.innerText;
-            	if (txtValue.indexOf(filter) > -1) {
-              		li[i].style.display = "";
-            	} else {
-              		li[i].style.display = "none";
-            	}
-          	}
+           	// Loop through all list items, and hide those who don't match the search query
+		for (i = 0; i < li.length; i++) {
+			a = li[i].getElementsByClassName("card-header")[0];
+			txtValue = a.textContent || a.innerText;
+			if (txtValue.toUpperCase().indexOf(filter) > -1) {
+				li[i].style.display = "";
+			} else {
+				li[i].style.display = "none";
+			}
+		}
 			
         }
         
-        window.onload = function() {
-            document.body.onmousedown = function() { 
-                console.log("MouseClicked")
-                if(document.getElementById("sidenav").className === "active"){
-                    setTimeout(() => {
-                        document.getElementById("sidenav").className = ""
-                    }, 200)
-                    
-                }
-            }
-            setTimeout(() => {
-                document.getElementById("loading-screen").className = "active"
-            },600)
-            setTimeout(() => {
-                var element = document.getElementById("loading-screen");
-                element.parentNode.removeChild(element);
-            },1100)
-            
-        }
     </script>
     <title>Quake Studios - Members</title>
         <style>
@@ -280,7 +262,7 @@
     </form>
 </div>
 
-<div style="display:flex;flex-wrap:wrap;width:58%;margin-left:auto;margin-right:auto">
+<div style="display:flex;flex-wrap:wrap;width:58%;margin-left:auto;margin-right:auto" class="members-container">
     <div class="card text-white bg-dark mb-3" style="width: 22rem">
         <div class="card-header" style="text-overflow: ellipsis;height:2.5rem;overflow: hidden;white-space:nowrap;background-color:#824cad">imanuggetgod</div>
         <div class="card-body">
